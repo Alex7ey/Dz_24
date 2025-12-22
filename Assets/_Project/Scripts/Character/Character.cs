@@ -1,8 +1,5 @@
-using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
 public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, IHealable
 {
@@ -62,7 +59,6 @@ public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, 
     {
         _agent = GetComponentInChildren<NavMeshAgent>();
         _health = new(_maxHealth);
-        //_material = GetComponentInChildren<SkinnedMeshRenderer>().material;
 
         _navMeshMover = new(_agent, _movementSpeed);
         _rotator = new(transform, _rotationSpeed, _agent);
@@ -73,28 +69,5 @@ public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, 
     {
         _rotator.Update(Time.deltaTime);
         _agentJumper.Update();
-
-        if (_health.CurrentHealth <= 0)
-        {
-            Die();
-        }
     }
-
-    public void Die()
-    {
-        StartCoroutine(Disolve());
-    }
-
-    private IEnumerator Disolve()
-    {
-        float progress = 0;
-
-        while (progress < 1)
-        {
-            progress += Time.deltaTime;
-            _material.SetFloat("_Edge", progress);
-            yield return null;
-        }
-    }
-
 }

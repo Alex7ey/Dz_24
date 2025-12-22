@@ -60,7 +60,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Edge: 1.0045549
+    - _Edge: 0
     - _NoizeScale: 3000
     - _NoizeSize: 100
     - _QueueControl: 0

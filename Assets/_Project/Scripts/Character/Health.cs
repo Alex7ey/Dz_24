@@ -23,7 +23,7 @@ public class Health
 
         _currentHealth -= damage;
 
-        if (_currentHealth <= 0)
+        if (_currentHealth < 0)
         {
             _currentHealth = 0;
             return;
@@ -37,7 +37,7 @@ public class Health
 
         _currentHealth += health;
 
-        if (_currentHealth >= _maxHealth)
+        if (_currentHealth > _maxHealth)
         {
             _currentHealth = _maxHealth;
             return;

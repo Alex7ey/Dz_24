@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class SoundCharacter : MonoBehaviour
@@ -22,8 +21,7 @@ public class SoundCharacter : MonoBehaviour
         }
 
         if (_character.InJumpProcess == false)
-        {
             _canPlayJumpSound = true;
-        }
+
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TargetToPointRotator
+public class AgentPathRotator
 {
     private readonly Transform _transform;
     private readonly float _rotationSpeed;
@@ -11,7 +11,7 @@ public class TargetToPointRotator
 
     private NavMeshPath _path = new();
 
-    public TargetToPointRotator(Transform transform, float rotationSpeed, NavMeshAgent agent)
+    public AgentPathRotator(Transform transform, float rotationSpeed, NavMeshAgent agent)
     {
         _transform = transform;
         _rotationSpeed = rotationSpeed;

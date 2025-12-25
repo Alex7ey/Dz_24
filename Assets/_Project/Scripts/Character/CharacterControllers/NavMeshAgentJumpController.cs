@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.AI;
 
 public class NavMeshAgentJumpController : Controller
 {
-    private IJumper _jumper;
-    private NavMeshAgent _agent;
+    private readonly IJumper _jumper;
 
-    public NavMeshAgentJumpController(IJumper jumper, NavMeshAgent agent)
+    public NavMeshAgentJumpController(IJumper jumper)
     {
         _jumper = jumper;
-        _agent = agent;
     }
 
     protected override void UpdateLogic(float deltaTime)
@@ -22,9 +17,9 @@ public class NavMeshAgentJumpController : Controller
 
     private bool IsOnNavMeshLink(out OffMeshLinkData navMeshLinkData)
     {
-        if (_agent.isOnOffMeshLink)
+        if (_jumper.Agent.isOnOffMeshLink)
         {
-            navMeshLinkData = _agent.currentOffMeshLinkData;
+            navMeshLinkData = _jumper.Agent.currentOffMeshLinkData;
             return true;
         }
 

@@ -1,8 +1,5 @@
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UIElements;
 
 public class NavMeshMover
 {

@@ -28,25 +28,24 @@ public class ViewCharacter : MonoBehaviour
     {
         SetMovementParameter();
         SetHealthParameter();
+        SetJumpParameter();
 
         if (IsTakeDamage())
             TriggerDamageAnimation();
 
         if (IsAlive() == false)
             TriggerDeathAnimation();
-
-        _animator.SetBool(_jumpKey, InJumpProcess());
     }
 
     private void SetMovementParameter() => _animator.SetFloat(_moveKey, (_character.CurrentDirectionToTarget).magnitude);
 
     private void SetHealthParameter() => _animator.SetFloat(_healthKey, _character.CurrentHealth / _character.MaxHealth);
 
+    private void SetJumpParameter() => _animator.SetBool(_jumpKey, _character.InJumpProcess);
+
     private void TriggerDamageAnimation() => _animator.SetTrigger(_hitKey);
 
     private void TriggerDeathAnimation() => _animator.SetBool(_deadKey, true);
-
-    private bool InJumpProcess() => _character.InJumpProcess;
 
     private bool IsTakeDamage()
     {

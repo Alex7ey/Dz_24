@@ -13,12 +13,14 @@ public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, 
 
     private Health _health;
     private NavMeshMover _navMeshMover;
-    private TargetToPointRotator _rotator;
+    private AgentPathRotator _agentPathRotator;
     private NavMeshAgentJumper _agentJumper;
 
     public Vector3 CurrentPosition => transform.position;
     public Vector3 CurrentPositionTarget => _navMeshMover.CurrentPositionTarget;
     public Vector3 CurrentDirectionToTarget => CurrentPositionTarget - transform.position;
+
+    public NavMeshAgent Agent => _agent;
 
     public int MaxHealth => _maxHealth;
     public bool IsAlive => _health.IsAlive;
@@ -37,7 +39,7 @@ public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, 
 
     public void SetLookAtPosition(Vector3 point)
     {
-        _rotator.SetLookAtPosition(point);
+        _agentPathRotator.SetLookAtPosition(point);
     }
 
     public void Jump(OffMeshLinkData offMeshLinkData)
@@ -61,13 +63,12 @@ public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, 
         _health = new(_maxHealth);
 
         _navMeshMover = new(_agent, _movementSpeed);
-        _rotator = new(transform, _rotationSpeed, _agent);
+        _agentPathRotator = new(transform, _rotationSpeed, _agent);
         _agentJumper = new(_movementSpeed, _agent, this, _animationCurve);
     }
 
     private void Update()
     {
-        _rotator.Update(Time.deltaTime);
-        _agentJumper.Update();
+        _agentPathRotator.Update(Time.deltaTime);
     }
 }

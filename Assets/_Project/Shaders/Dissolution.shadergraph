@@ -459,7 +459,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "4854f53c761849049f6faf48706e85e2",
     "m_Id": 0,
-    "m_DisplayName": "NoizeScale",
+    "m_DisplayName": "NoiseScale",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -705,10 +705,10 @@
     "m_Guid": {
         "m_GuidSerialized": "349f5daa-bbbd-43ec-9123-4ce257eaae9e"
     },
-    "m_Name": "NoizeScale",
+    "m_Name": "NoiseScale",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "NoizeScale",
-    "m_DefaultReferenceName": "_NoizeScale",
+    "m_RefNameGeneratedByDisplayName": "NoiseScale",
+    "m_DefaultReferenceName": "_NoiseScale",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

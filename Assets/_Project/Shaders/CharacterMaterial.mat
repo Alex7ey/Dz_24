@@ -61,6 +61,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _Edge: 0
+    - _NoiseScale: 1000
     - _NoizeScale: 3000
     - _NoizeSize: 100
     - _QueueControl: 0

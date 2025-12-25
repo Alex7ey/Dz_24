@@ -37,6 +37,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: afaae18ea4170da41a734c50fcf82a9e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_fafd0402bf9c4a3db50d7c539590ac40_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: afaae18ea4170da41a734c50fcf82a9e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -55,10 +59,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Multiplay: 5
+    - _MaxValueColor: 1
+    - _MaxValueScale: 3
+    - _MinValueColor: 0
+    - _MinValueScale: 1
+    - _Multiplay: 10
+    - _MultiplayColor: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _test: 3
+    - _ScaleFactor: 1
+    - _Value: 1
+    - _ValueColor: 1
+    - _test: 1.01
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 0.22343108, b: 0, a: 1}
+    - _IntensiveColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

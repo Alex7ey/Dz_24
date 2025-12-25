@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ManagerControllers : MonoBehaviour
+public class ControllerUpdater : MonoBehaviour
 {
     private CompositeController _compositeController;
 

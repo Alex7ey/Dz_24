@@ -10,13 +10,10 @@ public class Explosion
     private readonly Transform _transform;
     private readonly ParticleSystem _particleEffect;
     private readonly MonoBehaviour _coroutineRunner;
-
-    public bool IsExploding => _coroutineCountDown != null;
+    private readonly AudioClip _explosionAudioClip;
 
     private bool _isDestroyed;
-    private AudioClip _explosionAudioClip;
     private Coroutine _coroutineCountDown;
-
 
     public Explosion(float timeBeforeExplosion, Transform transform, float radiusExplode, ParticleSystem particleEffect, int damage, MonoBehaviour coroutineRunner, AudioClip explosionAudioClip)
     {
@@ -27,7 +24,16 @@ public class Explosion
         _damage = damage;
         _coroutineRunner = coroutineRunner;
         _explosionAudioClip = explosionAudioClip;
+    }
 
+    public bool IsExploding => _coroutineCountDown != null;
+
+    public void Explode()
+    {
+        if (IsExploding || _isDestroyed == true)
+            return;
+
+        _coroutineCountDown = _coroutineRunner.StartCoroutine(ProcessExplosionCountdown());
     }
 
     private IEnumerator ProcessExplosionCountdown()
@@ -40,14 +46,6 @@ public class Explosion
         _coroutineCountDown = null;
 
         yield break;
-    }
-
-    public void Explode()
-    {
-        if (IsExploding || _isDestroyed == true)
-            return;
-
-        _coroutineCountDown = _coroutineRunner.StartCoroutine(ProcessExplosionCountdown());
     }
 
     private void ExecuteExplosion()
@@ -75,9 +73,7 @@ public class Explosion
         foreach (var collider in colliders)
         {
             if (collider.TryGetComponent(out IDamagable damagable))
-            {
                 damagable.TakeDamage(_damage);
-            }
         }
     }
 }

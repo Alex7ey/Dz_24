@@ -4,46 +4,40 @@ using UnityEngine;
 public class MedkitSpawner : MonoBehaviour
 {
     [SerializeField] private float _spawnCooldown;
-    [SerializeField] private float _radius = 3;
-    [SerializeField] private Medkit _medKit;
+    [SerializeField] private float _radius = 10;
+    [SerializeField] private Medkit _medKitPrefab;
 
     private bool _isActive;
     private Coroutine _coroutine;
     private Transform _targetPosition;
 
-    public void Initialize(Transform transform)
-    {
-        _targetPosition = transform;
-    }
+    public void Initialize(Transform transform) => _targetPosition = transform;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.F))
             _isActive = !_isActive;
 
         if (_isActive && _coroutine == null)
-            _coroutine = StartCoroutine(ProccesSpawn());
-
-        if (_isActive == false && _coroutine != null)
-        {
-            StopCoroutine(_coroutine);
-            _coroutine = null;
-        }
+            _coroutine = StartCoroutine(RunSpawningProcess());
     }
 
-    private IEnumerator ProccesSpawn()
+    private IEnumerator RunSpawningProcess()
     {
-        while (true)
+        while (_isActive)
         {
-            yield return new WaitForSeconds(_spawnCooldown);
             Spawn();
+            yield return new WaitForSeconds(_spawnCooldown);
         }
+
+        _coroutine = null;
+        yield break;
     }
 
     private void Spawn()
     {
         Vector3 spawnPosition = _targetPosition.position + GetSpawnPosition();
-        Instantiate(_medKit, spawnPosition, Quaternion.identity, transform);
+        Instantiate(_medKitPrefab, spawnPosition, Quaternion.identity, transform);
     }
 
     private Vector3 GetSpawnPosition()

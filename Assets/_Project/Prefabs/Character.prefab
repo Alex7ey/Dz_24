@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationSpeed: 900
   _movementSpeed: 5
-  _maxHealth: 1
+  _maxHealth: 10
   _animationCurve:
     serializedVersion: 2
     m_Curve:

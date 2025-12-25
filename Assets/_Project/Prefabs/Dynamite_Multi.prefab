@@ -10,18 +10,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.027266
+      value: -0.10048914
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30741262
+      value: -0.71971864
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.3839216
+      value: -2.0369499
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
         type: 3}
@@ -36,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19167af14a724ee419dc46fde74afd84,
         type: 3}
@@ -81,6 +96,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 40244664388554222}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 19167af14a724ee419dc46fde74afd84,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 267691964905411782}
   m_SourcePrefab: {fileID: 100100000, guid: 19167af14a724ee419dc46fde74afd84, type: 3}
 --- !u!1 &6386055584898401253 stripped
 GameObject:
@@ -107,7 +126,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.17450301
+  m_Radius: 1
   m_Center: {x: 0.00548432, y: 0.17450301, z: 0.011809938}
 --- !u!114 &40244664388554222
 MonoBehaviour:
@@ -125,3 +144,18 @@ MonoBehaviour:
   _damage: 3
   _explosionEffect: {fileID: 0}
   _explosionSound: {fileID: 8300000, guid: 755f6821077683d4f96f1660eec9a985, type: 3}
+--- !u!114 &267691964905411782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386055584898401253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a979358b092293747be9d2b338573dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleFactor: 2
+  _colorFactor: 10
+  _animationSpeed: 4

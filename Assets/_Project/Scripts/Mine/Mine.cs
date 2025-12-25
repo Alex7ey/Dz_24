@@ -7,16 +7,17 @@ public class Mine : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private ParticleSystem _explosionEffect;
     [SerializeField] private AudioClip _explosionSound;
-    [SerializeField] private ShaderPulseController _shader;
 
     private float _detectionRadius;
     private Explosion _explosion;
 
-    private float _sizeMultiplier => transform.localScale.x;
+    private float _scaleFactor => transform.localScale.x;
+
+    public bool IsExploding  => _explosion.IsExploding;
 
     private void Awake()
     {
-        _detectionRadius = GetComponent<SphereCollider>().radius * _sizeMultiplier;
+        _detectionRadius = GetComponent<SphereCollider>().radius * _scaleFactor;
         _explosion = new(_timeBeforeExplosion, transform, _detectionRadius, _explosionEffect, _damage, this, _explosionSound);
     }
 
@@ -25,7 +26,6 @@ public class Mine : MonoBehaviour
         if (other.TryGetComponent(out IDamagable _))
         {
             _explosion.Explode();
-            _shader.StartCoroutine(_shader.PlayAnimationExplosion());
         }
     }
 

@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HearthBeat
+  m_Name: MineMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 3b49860174de2004da4c8120d099e3f5,
     type: 3}
   m_Parent: {fileID: 0}
@@ -41,8 +41,20 @@ Material:
         m_Texture: {fileID: 2800000, guid: afaae18ea4170da41a734c50fcf82a9e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicMap:
+        m_Texture: {fileID: 2800000, guid: b0a9b8eafd3af084b85acb5a3b131e09, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 508b04f158314ff449bf28eb2a67333c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_fafd0402bf9c4a3db50d7c539590ac40_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: afaae18ea4170da41a734c50fcf82a9e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: b0a9b8eafd3af084b85acb5a3b131e09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -59,8 +71,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ColorFactor: 10
     - _MaxValueColor: 1
     - _MaxValueScale: 3
+    - _Metallic: 0
     - _MinValueColor: 0
     - _MinValueScale: 1
     - _Multiplay: 10
@@ -69,9 +83,10 @@ Material:
     - _QueueOffset: 0
     - _ScaleFactor: 1
     - _Value: 1
-    - _ValueColor: 1
+    - _ValueColor: 0
     - _test: 1.01
     m_Colors:
-    - _Color: {r: 1, g: 0.22343108, b: 0, a: 1}
+    - _Backlight_olor: {r: 1, g: 0.62073624, b: 0.042452812, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _IntensiveColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

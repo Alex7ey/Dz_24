@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1859977019522794329}
   - component: {fileID: 4243146271811444282}
   - component: {fileID: 8343056472596572547}
+  - component: {fileID: 1317177559889649512}
   m_Layer: 0
   m_Name: MedKit
   m_TagString: Untagged
@@ -119,3 +120,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.068394355
   m_Center: {x: 0, y: 0.068398155, z: 0}
+--- !u!114 &1317177559889649512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095620726040669606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f46626e346cdba41ab100ebc0a3c5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleFactor: 1
+  _colorFactor: 10
+  _animationSpeed: 3

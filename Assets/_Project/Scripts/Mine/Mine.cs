@@ -12,7 +12,6 @@ public class Mine : MonoBehaviour
     private Explosion _explosion;
 
     private float _scaleFactor => transform.localScale.x;
-
     public bool IsExploding  => _explosion.IsExploding;
 
     private void Awake()
@@ -36,7 +35,7 @@ public class Mine : MonoBehaviour
 
     private void ShowRadiusDetection()
     {
-        Gizmos.color = new Color(1, 0, 0, 0.3f);
+        Gizmos.color = new Color(1, 0, 0, 0.2f);
         Gizmos.DrawSphere(transform.position, _detectionRadius);
     }
 }

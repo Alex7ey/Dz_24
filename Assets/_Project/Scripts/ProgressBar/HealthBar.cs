@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image _progressBar;
+
     private Character _character;
 
     private float _maxValue;

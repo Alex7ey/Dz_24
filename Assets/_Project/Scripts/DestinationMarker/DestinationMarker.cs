@@ -6,7 +6,6 @@ public class DestinationMarker : MonoBehaviour
     [SerializeField] private float _collectionDistance = 0.5f;
 
     private IMovable _movable;
-
     private Vector3 _targetPosition;
 
     public void Initialize(IMovable movable)
@@ -19,7 +18,6 @@ public class DestinationMarker : MonoBehaviour
 
     public void Update()
     {
-
         if (_targetPosition != _movable.CurrentPositionTarget)
         {
             SetMarkerPosition();
@@ -27,9 +25,7 @@ public class DestinationMarker : MonoBehaviour
         }
 
         if (IsTargetReached())
-        {
             DisableMarker();
-        }
     }
 
     private void SetMarkerPosition()

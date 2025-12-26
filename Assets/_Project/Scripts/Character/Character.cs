@@ -20,12 +20,9 @@ public class Character : MonoBehaviour, IMovable, IRotate, IDamagable, IJumper, 
     public Vector3 CurrentPositionTarget => _navMeshMover.CurrentPositionTarget;
     public Vector3 CurrentDirectionToTarget => CurrentPositionTarget - transform.position;
 
-    public NavMeshAgent Agent => _agent;
-
     public int MaxHealth => _maxHealth;
     public bool IsAlive => _health.IsAlive;
     public int CurrentHealth => _health.CurrentHealth;
-
     public bool InJumpProcess => _agentJumper.InProcess;
 
     public void MoveTo(RaycastHit[] hits)

@@ -5,6 +5,7 @@ public class SoundCharacter : MonoBehaviour
     [SerializeField] private AudioClip _jumpAudio;
 
     private Character _character;
+
     private bool _canPlayJumpSound;
 
     private void Awake()
@@ -22,6 +23,5 @@ public class SoundCharacter : MonoBehaviour
 
         if (_character.InJumpProcess == false)
             _canPlayJumpSound = true;
-
     }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7896858464734789189}
   - component: {fileID: 3341927945662318065}
-  - component: {fileID: 2407658215359915528}
   - component: {fileID: 5914332768577466671}
   - component: {fileID: -3768489476725121853}
   - component: {fileID: -3562080295656137572}
@@ -53,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationSpeed: 900
   _movementSpeed: 5
-  _maxHealth: 10
+  _maxHealth: 1
   _animationCurve:
     serializedVersion: 2
     m_Curve:
@@ -88,18 +87,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _material: {fileID: 2100000, guid: 13caaae6f289b6547ace7d197da879b3, type: 2}
---- !u!114 &2407658215359915528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114789741989770263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0738b641408c35743889fe0f345a136a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5914332768577466671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +294,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1696834749189059949, guid: 4a46e821c58b5cd42b14eaab6d197266,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5246350038267891022}
+      addedObject: {fileID: 2285707587659802424}
   m_SourcePrefab: {fileID: 100100000, guid: 4a46e821c58b5cd42b14eaab6d197266, type: 3}
 --- !u!1 &1465869613787460166 stripped
 GameObject:
@@ -336,7 +323,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5246350038267891022
+--- !u!114 &2285707587659802424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,10 +332,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1465869613787460166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ef53e2e76e5e34aab485013fd196c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0738b641408c35743889fe0f345a136a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dissolveTime: 3
 --- !u!4 &2420909807645839732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2468889828458600031, guid: 4a46e821c58b5cd42b14eaab6d197266,
